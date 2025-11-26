@@ -1,0 +1,22 @@
+.skill-pill {
+  display: flex;
+  align-items: center;
+
+  gap: 0.2rem;
+  padding: 0.3rem;
+  padding-right: 0.35rem;
+
+  /* background-color: #3b3b3b; */
+
+  border: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  /* border-width: 1px; */
+}
+
+.skill-pill img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
