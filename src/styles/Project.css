@@ -1,4 +1,4 @@
-.about-container {
+.project-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -40,7 +40,52 @@
   gap: 1rem;
 }
 
-.skills-list {
+h2 {
+  font-size: 1.3rem;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-pill {
+  display: flex;
+  align-items: center;
+
+  gap: 0.2rem;
+  padding: 0.3rem;
+  padding-right: 0.35rem;
+
+  border: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  font-weight: 500;
+
+  /* background-color: #444;  */
+  color: #B8D8D8;
+  border-color: #1cbaac;
+  box-shadow: inset 0px 0px 6px #1cbaac;
+}
+
+.link-pill.primary-link {
+  border-color: #ebb723;
+  box-shadow: inset 0px 0px 6px #ebb723;
+}
+
+.link-pill img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.skill-list {
   display: flex;
   flex-direction: row;
   justify-content: center;

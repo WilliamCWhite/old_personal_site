@@ -2,54 +2,53 @@
   "project_pages": [
     {
       "title": "Tallykeeper",
-      "image": "ADD LINK",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero.",
       "links": [
         {
           "type": "primary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Try Tallykeeper",
+          "url": "https://williamcwhite.dev/tallykeeper",
+          "iconName": "play",
+          "label": "Try Tallykeeper"
         },
         {
           "type": "secondary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Frontend Repo",
+          "url": "https://github.com/WilliamCWhite/tallykeeper_frontend",
+          "iconName": "github",
+          "label": "Frontend Repo"
         },
         {
           "type": "secondary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Backend Repo",
+          "url": "https://github.com/WilliamCWhite/tallykeeper_backend",
+          "iconName": "github",
+          "label": "Backend Repo"
         }
       ],
-      "technologies": ["react", "go", "postgres"]
+      "technologies": ["react", "golang", "postgres", "typescript", "tailwind"]
     },
     {
       "title": "Basic Notes",
-      "image": "ADD LINK",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed mauris a arcu viverra varius tempus eget metus. Fusce vitae odio sollicitudin, ornare enim quis, facilisis ante. Vivamus ornare lectus quis gravida sodales. Proin consequat dui ut justo pretium, venenatis sagittis ex congue. Maecenas fermentum posuere magna ornare imperdiet. Vestibulum ante tellus, auctor vel vehicula in, tincidunt sed eros. Vivamus auctor dignissim vulputate. Nulla convallis ut ipsum et laoreet. Vivamus eget venenatis massa. Pellentesque congue justo massa, vitae tempor tortor euismod in. Nulla facilisi. Morbi in nibh eget eros porttitor facilisis vel non libero.",
       "links": [
         {
           "type": "primary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Try Basic Notes",
+          "url": "https://williamcwhite.dev/basic_notes",
+          "iconName": "play",
+          "label": "Try Basic Notes"
         },
         {
           "type": "secondary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Frontend Repo",
+          "url": "https://github.com/WilliamCWhite/basic_notes_frontend",
+          "iconName": "github",
+          "label": "Frontend Repo"
         },
         {
           "type": "secondary",
-          "url": "ADD LINK",
-          "icon": "ADD LINK",
-          "label": "Backend Repo",
+          "url": "https://github.com/WilliamCWhite/basic_notes_backend",
+          "iconName": "github",
+          "label": "Backend Repo"
         }
-      ]
+      ],
+      "technologies": ["react", "nodejs", "postgres"]
     }
   ]
 

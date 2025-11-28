@@ -19,7 +19,7 @@ import tailwindIcon from '../assets/icons/icons8-tailwindcss-144.png'
 import tsIcon from '../assets/icons/icons8-typescript-144.png'
 
 
-const iconMap = {
+export const iconMap = {
   aws: awsIcon,
   c: cIcon,
   cSharp: cSharpIcon,
