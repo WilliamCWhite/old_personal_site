@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from 'framer-motion';
+
 import './styles/App.css'
 import './styles/ColorSpans.css'
 import AboutSlide from './components/AboutSlide'
@@ -9,34 +11,48 @@ import Header from './components/Header'
 import { useState } from 'react'
 import Project from './components/Project'
 
-const NUM_PROJECTS = 2;
+// ANIMATIONS
+const slideVariants = {
+  // Incoming component: comes from Right (+1) or Left (-1)
+  enter: (direction: number) => ({
+    x: direction > 0 ? '100%' : '-100%',
+    opacity: 0,
+  }),
+  // Active component: sits in the center
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  // Outgoing component: goes to Left (-1) or Right (+1)
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? '100%' : '-100%',
+    opacity: 0,
+  }),
+};
 
+// const swipeTransition = {
+//   x: { type: "spring", stiffness: 300, damping: 30 },
+//   opacity: { duration: 0.2 }
+// };
+// END ANIMATIONS
 
 function App() {
 
-  const [pageIndex, setPageIndex] = useState<number>(0);
+  const [[pageIndex, direction], setPageIndex] = useState<[number, number]>([0, 0]);
 
-  function prevPage() {
-    if (pageIndex > 0) {
-      setPageIndex(pageIndex - 1);
+  const slides = [
+    { id: 'about', component: <AboutSlide /> },
+    { id: 'project0', component: <Project projectIndex={0}  /> },
+    { id: 'project1', component: <Project projectIndex={1} /> }
+  ]
+
+  function changePage(direction: number) {
+    if (pageIndex + direction >= slides.length || pageIndex + direction < 0) {
+      return;
     }
-  }
-
-  function nextPage() {
-    if (pageIndex < NUM_PROJECTS) {
-      setPageIndex(pageIndex + 1);
-    }
-  }
-
-  let slideBoxContent;
-
-  switch (pageIndex) {
-    case 0:
-      slideBoxContent = ( <AboutSlide /> )
-      break;
-    default:
-      slideBoxContent = ( <Project pageIndex={pageIndex} /> )
-      break;
+    setPageIndex([pageIndex + direction, direction])
   }
 
   return (
@@ -45,15 +61,38 @@ function App() {
         <Header />
         <div className="carousel-container">
           <div className="button-area">
-            <div className="button-circle" onClick={prevPage}>
+            <div className="button-circle" onClick={()=>{changePage(-1)}}>
               <img src={backIcon}/>
             </div>
           </div>
           <div className="slide-box">
-            {slideBoxContent}
+              <AnimatePresence initial={false} custom={direction} >
+                <motion.div
+                  key={slides[pageIndex].id}           
+
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={
+                    {
+                      x: { type: "spring", stiffness: 400, damping: 30 },
+                      opacity: { duration: 0.2 }
+                    }
+                  }
+                  
+                  className="motion-container"
+                >
+                  <div className="animation-shell">
+                    {slides[pageIndex].component}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
           </div>
           <div className="button-area">
-            <div className="button-circle" onClick={nextPage}>
+            <div className="button-circle" onClick={()=>{changePage(1)}}>
               <img src={nextIcon}/>
             </div>
           </div>

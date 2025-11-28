@@ -45,6 +45,7 @@ function AboutSlide() {
       </div>
     </div>
 
+    
   )
 
 }

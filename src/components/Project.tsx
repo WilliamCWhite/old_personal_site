@@ -63,12 +63,12 @@ const projects: ProjectObj[] = projectData.project_pages;
 const images = [tallykeeperImg]
 
 export interface ProjectProps {
-  pageIndex: number;
+  projectIndex: number;
 }
 
 function Project( props: ProjectProps ) {
 
-  const pIdx = props.pageIndex - 1;
+  const pIdx = props.projectIndex;
 
   const links = projects[pIdx].links.map((link: ProjectLink) => {
     
@@ -131,6 +131,7 @@ function Project( props: ProjectProps ) {
       </div>
 
     </div>
+
 
   )
 
