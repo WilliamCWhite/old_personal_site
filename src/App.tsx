@@ -55,15 +55,39 @@ function App() {
     setPageIndex([pageIndex + direction, direction])
   }
 
+  function buttonDisplayToggle(icon: string) {
+    if (icon == "back") {
+
+      if (pageIndex <= 0) {
+        return
+      }
+      return (
+        <div className="button-circle" onClick={()=>{changePage(-1)}}>
+          <img src={backIcon}/>
+        </ div>
+      )
+    }
+
+    else if (icon == "next") {
+
+      if (pageIndex >= slides.length - 1) {
+        return
+      }
+      return (
+        <div className="button-circle" onClick={()=>{changePage(1)}}>
+          <img src={nextIcon}/>
+        </ div>
+      )
+    }
+  }
+
   return (
     <main className="full-page">
       <div className="main-column">
         <Header />
         <div className="carousel-container">
           <div className="button-area">
-            <div className="button-circle" onClick={()=>{changePage(-1)}}>
-              <img src={backIcon}/>
-            </div>
+            {buttonDisplayToggle("back")}
           </div>
           <div className="slide-box">
               <AnimatePresence initial={false} custom={direction} >
@@ -92,12 +116,10 @@ function App() {
 
           </div>
           <div className="button-area">
-            <div className="button-circle" onClick={()=>{changePage(1)}}>
-              <img src={nextIcon}/>
-            </div>
+            {buttonDisplayToggle("next")}
           </div>
         </div>
-        <div className="book-placeholder">.</div>
+        <div className="book-placeholder"> </div>
       </div>
 
     </main>
